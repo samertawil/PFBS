@@ -12,17 +12,17 @@ trait FlashMsgTraits
       
         if ($msg == 'create') {
             return toastr()->progressBar(false)->timeOut(1000) 
-            ->$msgType(__('uilogin.data_created_success'));
+            ->$msgType(__('PFBS.data_created_success'));
         }
 
          else if  ($msg == 'update') {
             return toastr()->progressBar(false)->timeOut(1000) 
-            ->$msgType(__('uilogin.data_edited_success'));
+            ->$msgType(__('PFBS.data_edited_success'));
         }
 
         else if ($msg == 'destroy') {
             return toastr()->progressBar(false)->timeOut(1000) 
-            ->$msgType(__('uilogin.data_deleted_success'));
+            ->$msgType(__('PFBS.data_deleted_success'));
         }
 
        else {

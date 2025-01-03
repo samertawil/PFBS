@@ -5,31 +5,31 @@
             <div class="text-dark">
                 <div class="d-flex align-items-center ">
                     <label class="col-form-label mx-5" style="font-weight: 600; width:130px;" for="">
-                        {{ __('uilogin.mobile_primary') }} </label>
-                    <td class=" "> {{ $this->contacts['mobile_primary'] ?? 'لا يوجد رقم' }} </td>
+                        {{ __('PFBS.mobile_primary') }} </label>
+                    <td class=" "> {{ $this->contacts['mobile_primary'] ??  __('PFBS.no data') }} </td>
                 </div>
     
                 <div class="d-flex align-items-center ">
                     <label class="col-form-label mx-5" style="font-weight: 600; width:130px;"
-                        for="">{{ __('uilogin.mobile_secondary') }} </label>
-                    <td> {{ $this->contacts['mobile_secondary'] ?? 'لا يوجد رقم' }} </td>
+                        for="">{{ __('PFBS.mobile_secondary') }} </label>
+                    <td> {{ $this->contacts['mobile_secondary'] ??  __('PFBS.no data') }} </td>
                 </div>
     
                 <div class="d-flex align-items-center ">
                     <label class="col-form-label mx-5" style="font-weight: 600; width:130px;"
-                        for="">{{ __('uilogin.orignal_address') }} </label>
-                    <td> {{ $this->contacts['orignal_address'] ?? 'لا يوجد بيانات' }} </td>
+                        for="">{{ __('PFBS.orignal_address') }} </label>
+                    <td> {{ $this->contacts['orignal_address'] ??  __('PFBS.no data') }} </td>
                 </div>
     
                 <div class="d-flex align-items-center ">
                     <label class="col-form-label mx-5" style="font-weight: 600; width:130px;"
-                        for="">{{ __('uilogin.eviction_address') }} </label>
-                    <td> {{ $this->contacts['eviction_address'] ?? 'لا يوجد بيانات' }} </td>
+                        for="">{{ __('PFBS.eviction_address') }} </label>
+                    <td> {{ $this->contacts['eviction_address'] ??  __('PFBS.no data') }} </td>
                 </div>
             </div>
             <br>   
       
-        <x-tag-a class="btn-primary" :route="route('contact.data')" :name="__('uilogin.goToData')"></x-tag-a>  
+        <x-tag-a class="btn-primary" :route="route('contact.data')" :name="__('PFBS.goToData')"></x-tag-a>  
   
 
     
@@ -38,13 +38,13 @@
          
     </div>
 
-    <div class="col-lg-6 col-xxl-4 order-1 order-xxl-1">
+    <div class="col-lg-6 col-xxl-4 order-1 order-xxl-1 mt-3">
 
         <div class="card card-custom card-stretch gutter-b">
       
             <div class="card-header border-0 pt-5">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label font-weight-bolder text-dark">{{__('uilogin.main services')}}</span>
+                    <span class="card-label font-weight-bolder text-dark " style="text-decoration: underline">{{__('PFBS.main services')}}</span>
                     {{-- <span class="text-muted mt-3 font-weight-bold font-size-sm">Pending 10 tasks</span> --}}
                 </h3>
            
@@ -58,7 +58,7 @@
                         <span class="symbol-label">
                             <span
                                 class="svg-icon svg-icon-xl svg-icon-primary"><!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg--><svg
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns="#" xmlns:xlink="#"
                                     width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <rect x="0" y="0" width="24" height="24"></rect>
@@ -73,8 +73,8 @@
                                 </svg><!--end::Svg Icon--></span> </span>
                     </div>
                 
-                    <div class="d-flex flex-column font-weight-bold">
-                        <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">خدمة تسجيل الاطفال</a>
+                    <div class="d-flex flex-column font-weight-bold ">
+                        <a href="{{route('mal-app')}}" class="text-dark text-hover-primary mb-1 font-size-lg">{{__('PFBS.MalnutritionApp')}}</a>
                         <span class="  text-danger" >شروط الخدمة : ان يكون السكن الاصلي لرب الاسرة من مدينة غزة</span>
                     </div>
                   

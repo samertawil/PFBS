@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserPersonalData extends Model
 {
-   protected $fillable=['mobile_secondary', 'mobile_primary','orignal_address','eviction_address'];
+   protected $table='user_personal_data';
+   protected $fillable=['mobile_secondary', 'mobile_primary','orignal_address','eviction_address','idc','full_name'];
    
 }

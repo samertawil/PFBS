@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Citizen;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
+use App\Models\UserPersonalData;
 
 
 class Questions extends Component
@@ -17,19 +18,22 @@ class Questions extends Component
        
         if(   session('answer_q1')==$this->answer_q1 &&  session('answer_q2')==$this->answer_q2) {
 
-            User::create([
-                'idc'=>session('idc'),
-                'full_name'=>session('full_name'),
-                'birthdate'=>session('birthdate'),
-            ]);
+            $contactData=UserPersonalData::firstWhere('idc', session('idc'));
 
+            if(! $contactData) {
+                UserPersonalData::create([
+                    'idc'=>session('idc'),
+                    'full_name'=>session('full_name'),
+                ]);
+            }
+    
             session()->put('auth_idc',session('idc') );
         
             return redirect()->route('home');
     
         } else {
  
-          return redirect()->back()->with('message',__('uilogin.wrongAnswer'))->with('type','danger');
+          return redirect()->back()->with('message',__('PFBS.wrongAnswer'))->with('type','danger');
         }
 
       

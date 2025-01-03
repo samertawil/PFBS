@@ -59,7 +59,7 @@ class MalnutritionService extends Component
 
         public function render()
     {
-      $pageTitle=__('uilogin.MalnutritionApp');
+      $pageTitle=__('PFBS.MalnutritionApp');
        
         return view('livewire.malnutrition-services.malnutrition-app')->layoutData(['pageTitle'=>$pageTitle]);
     }

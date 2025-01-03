@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Palusers extends Model
 {
-   protected $table='palusers';
+   
+    protected $table='palusers';  
+
+   // protected $connection = 'mysql1'; 
+
+   // protected $table='users';
+
+ 
+
 }

@@ -22,9 +22,9 @@
     <!--begin::Header Mobile-->
     <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
         <!--begin::Logo-->
-        <a href="index.html">
-            <img alt="Logo" src=" {{ asset('template-assets/metronic7/media/logos/logo-light.png') }}" />
-
+        <a href="{{route('home')}}">
+            {{-- <img alt="Logo" src=" {{ asset('template-assets/metronic7/media/logos/logo-light.png') }}" /> --}}
+            <span class="h4">P.F.B.S </span>
 
         </a>
         <!--end::Logo-->
@@ -38,9 +38,9 @@
             <!--end::Aside Mobile Toggle-->
 
             <!--begin::Header Menu Mobile Toggle-->
-            <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
+            {{-- <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
                 <span></span>
-            </button>
+            </button> --}}
             <!--end::Header Menu Mobile Toggle-->
 
             <!--begin::Topbar Mobile Toggle-->

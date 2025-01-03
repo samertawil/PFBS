@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('parent_idc');
             $table->integer('status_id')->nullable();
             $table->boolean('can_delete')->default(true);
+            $table->string('created_by')->nullable();
             $table->timestamps();
         });
     }

@@ -11,35 +11,40 @@ class Dlogin extends Component
 {
     public $idc;
     public $birthdate;
+    public $year;
+    public $month;
+    public $day;
 
     public function authenticate()
     {
+        // dd($this->all());
 
-        $user =  User::where('idc', $this->idc)->first();
+        // $user =  User::where('idc', $this->idc)->first();
 
-        if ($user) {
+        // if ($user) {
 
-            if ($user->birthdate == $this->birthdate) {
-                session([
-                    'auth_idc' => $user->idc,
-                    'full_name' => $user->full_name,
+        //     if ($user->birthdate == $this->birthdate) {
+        //         session([
+        //             'auth_idc' => $user->idc,
+        //             'full_name' => $user->full_name,
 
-                ]);
+        //         ]);
 
-                return redirect()->route('home');
-            } else {
+        //         return redirect()->route('home');
+        //     } else {
                  
-                $this->addError('birthdate', __('uilogin.wrong_birthdat'));
+        //         $this->addError('birthdate', __('PFBS.wrong_birthdat'));
 
-                return;
-            }
-        }
+        //         return;
+        //     }
+        // }
 
         $citizen = Citizen::current_user_citizen_idc($this->idc);
 
 
         if ($citizen) {
-
+       
+            $this->birthdate=$this->year.'-'.$this->month.'-'.$this->day;
 
             if (($citizen->CI_BIRTH_DT ==  $this->birthdate)) {
 
@@ -56,7 +61,7 @@ class Dlogin extends Component
                 return redirect()->route('user.verify.questions');
             } else {
 
-                $this->addError('birthdate', __('uilogin.wrong_birthdat'));
+                $this->addError('birthdate', __('PFBS.wrong_birthdat'));
 
                 session()->forget('idc');
 
@@ -64,7 +69,7 @@ class Dlogin extends Component
             }
         } else {
 
-            $this->addError('idc', __('uilogin.wrong_idc'));
+            $this->addError('idc', __('PFBS.wrong_idc'));
 
             return;
         }

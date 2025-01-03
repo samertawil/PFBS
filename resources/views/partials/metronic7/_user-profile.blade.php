@@ -21,7 +21,7 @@
             </div>
             <div class="d-flex flex-column">
                 <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
-                    {{ session('full_name') ?? __('uilogin.guest')  }}
+                    {{ session('full_name') ?? __('PFBS.guest')  }}
                 </a>
                 
                 <div class="navi mt-2">

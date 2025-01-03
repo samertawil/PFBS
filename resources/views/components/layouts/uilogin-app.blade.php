@@ -25,31 +25,7 @@
 
     <link href="{{ asset('template-assets/main.css') }}" rel="stylesheet" type="text/css" />
 
-    {{-- <style>
-        @font-face {
-            font-family: 'Droid';
-
-            src: url({{ asset('uilogin-assets/fonts/ar/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') }});
-
-        }
-
-
-        @font-face {
-            font-family: 'NotoSans';
-
-            src: url({{ asset('uilogin-assets/fonts/en/NotoSans-Regular.ttf') }});
-        }
-
-
-        body {
-
-            margin: 0;
-            font-family: 'Droid', 'NotoKufiArabic', 'NotoSans', 'Courier New', Courier, monospace !important;
-
-        }
-    </style> --}}
-    {{-- @include('layouts.head') --}}
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? env('APP_NAME') }}</title>
 </head>
 <style>
     #global-loader {

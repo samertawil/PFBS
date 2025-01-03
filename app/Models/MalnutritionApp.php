@@ -14,5 +14,6 @@ class MalnutritionApp extends Model
         'parent_idc',
         'status_id',
         'can_delete',
+      
     ];
 }

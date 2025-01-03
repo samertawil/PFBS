@@ -4,7 +4,7 @@
              <div class="col-md-5">
                  <div class="card">
 
-                     <div class="card-header">{{ __('uilogin.get-help') }}</div>
+                     <div class="card-header">{{ __('PFBS.get-help') }}</div>
 
 
 
@@ -13,10 +13,10 @@
                          <form wire:submit='create'>
 
 
-                             <x-input  name="name" wire:model='name' label :labelname="__('uilogin.providerName')" req
+                             <x-input  name="name" wire:model='name' label :labelname="__('PFBS.providerName')" req
                                  divWidth="12"></x-input>
 
-                             <x-input name="user_name" wire:model='user_name' label :labelname="__('uilogin.accountName')"
+                             <x-input name="user_name" wire:model='user_name' label :labelname="__('PFBS.accountName')"
                                  divWidth="12"></x-input>
 
 
@@ -25,11 +25,11 @@
                                  $techsipport = 'techsupport_' . app()->getLocale();
                              @endphp
 
-                             <x-input name="mobile" wire:model='mobile' label divWidth="12"
-                                 :description_field="__('uilogin.mobileDetails')"></x-input>
+                             <x-input name="mobile" wire:model='mobile' label divWidth="12" 
+                                 :description_field="__('PFBS.mobileDetails')"></x-input>
 
                              <x-select wire:model='subject_id' id='subject_id' name="subject_id"
-                                 :options="config($techsipport)['list']" label :labelname="__('uilogin.help-type')" divWidth="12" req></x-select>
+                                 :options="config($techsipport)['list']" label :labelname="__('PFBS.help-type')" divWidth="12" req></x-select>
 
                              <x-uilogin-textarea wire:model='issue_description' name="issue_description" label req
                                  rows="4" cols="30" divWidth="12"></x-uilogin-textarea>
@@ -43,7 +43,7 @@
 
                          <input type="text" wire:model='captcha' name="captcha"
                              class="form-control  my-3 @error('captcha') is-invalid @enderror"
-                             placeholder="{{ __('uilogin.captcha') }}">
+                             placeholder="{{ __('PFBS.captcha') }}">
                          @error('captcha')
                              <div class="invalid-feedback">{{ $message }}</div>
                          @enderror
@@ -55,10 +55,10 @@
                  <div class="row my-3 ">
 
 
-                     <x-button :name="__('uilogin.send')" class="bg-primary text-white"
+                     <x-button :name="__('PFBS.send')" class="bg-primary text-white"
                          divlclass="d-grid gap-2"></x-button>
 
-                     <x-uilogin-cancel-back :route="route('dlogin')" wire:navigate label="cancel_back"></x-uilogin-cancel-back>
+                     <x-uilogin-cancel-back :route="route('login')" wire:navigate label="cancel_back"></x-uilogin-cancel-back>
                  </div>
 
                  </form>

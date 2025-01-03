@@ -19,8 +19,8 @@ class Home extends Component
     
     public function render()
     {
-        $title =__('uilogin.hosbital name');
-        $pageTitle =__('uilogin.home page');
+        $title =__('PFBS.hosbital name');
+        $pageTitle =__('PFBS.home page');
         return view('livewire.home')->layoutData(['title'=>$title,'pageTitle'=>$pageTitle]);
     }
 }

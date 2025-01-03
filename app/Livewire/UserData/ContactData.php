@@ -78,8 +78,8 @@ class ContactData extends Component
     public function render()
     {
         
-        $title = __('uilogin.contact_data') ;
-        $pageTitle =  __('uilogin.contact_data') ;
+        $title = __('PFBS.contact_data') ;
+        $pageTitle =  __('PFBS.contact_data') ;
         return view('livewire.user-data.contact-data')->layoutData(['title'=>$title,'pageTitle' => $pageTitle]);
     }
 }

@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('uilogin.register_new_account') }} // {{ session('idc') }}</div>
+                    <div class="card-header">{{ __('PFBS.validate questions') }} // {{ session('idc') }}</div>
 
                     <div class="card-body">
                         @include('partials.general._alert-session')
@@ -15,7 +15,7 @@
                                 <div class="row mb-3">
 
                                     <label for="q1"
-                                        class="col-md-2 col-form-label  required">{{ __('uilogin.q1') }}
+                                        class="col-md-2 col-form-label  required">{{ __('PFBS.q1') }}
                                     </label>
 
                                     <div class="col-md-7">
@@ -32,7 +32,7 @@
                                         @include('partials.general._show-error', [
                                             'field_name' => 'answer_q1',
                                         ])
-                                        <small class="text-muted">{{ __('uilogin.ex') }} 2012</small>
+                                        <small class="text-muted">{{ __('PFBS.ex') }} 2012</small>
                                     </div>
 
                                 </div>
@@ -42,7 +42,7 @@
                                 <div class="row mb-3">
 
                                     <label for="q2"
-                                        class="col-md-2 col-form-label  required">{{ __('uilogin.q2') }}
+                                        class="col-md-2 col-form-label  required">{{ __('PFBS.q2') }}
                                     </label>
 
                                     <div class="col-md-7">
@@ -59,18 +59,18 @@
                                         @include('partials.general._show-error', [
                                             'field_name' => 'answer_q2',
                                         ])
-                                        <small class="text-muted">{{ __('uilogin.ex') }} 1983</small>
+                                        <small class="text-muted">{{ __('PFBS.ex') }} 1983</small>
                                     </div>
 
                                 </div>
                             @endif
 
-                            <x-button :name="__('uilogin.register_new_account')" class="bg-primary text-white"
+                            <x-button :label="__('PFBS.access')" class="bg-primary text-white"
                                 divlclass="d-grid gap-2"></x-button>
 
 
-                            <x-uilogin-cancel-back :route="route('login')" wire:navigate
-                                label="cancel_back"></x-uilogin-cancel-back>
+                            <x-cancel-back :route="route('login')" wire:navigate
+                                label="cancel_back"></x-cancel-back>
                         </form>
 
                     </div>
